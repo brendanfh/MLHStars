@@ -1,0 +1,84 @@
+Grab Actor ID by actor name:
+https://api.themoviedb.org/3/search/person?api_key=ca4a0d08142c8099663566799ee1af54&language=en-US&query={NAMEQUERY}&page=1&include_adult=false
+
+
+Grab Movie ID by movie name:
+https://api.themoviedb.org/3/search/movie?api_key={API}&language=en-US&query={MOVIE_NAME}&page=1&include_adult=false
+
+Return:
+{
+  "page": 1,
+  "total_results": 2,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_count": 12122,
+      "id": 13,
+      "video": false,
+      "vote_average": 8.4,
+      "title": "Forrest Gump",
+      "popularity": 25.642,
+      "poster_path": "/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg",
+      "original_language": "en",
+      "original_title": "Forrest Gump",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "backdrop_path": "/7c9UVPPiTPltouxRVY6N9uugaVA.jpg",
+      "adult": false,
+      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+      "release_date": "1994-07-06"
+    }
+  ]
+}
+
+
+Grab Credits from Movie with ID {ID}:
+https://api.themoviedb.org/3/movie/{ID}/credits?api_key=ca4a0d08142c8099663566799ee1af54
+
+Return:
+{
+  "id": 2,
+  "cast": [
+    {
+      "cast_id": 3,
+      "character": "Taisto Olavi Kasurinen",
+      "credit_id": "52fe420dc3a36847f8000029",
+      "gender": 0,
+      "id": 54768,
+      "name": "Turo Pajala",
+      "order": 0,
+      "profile_path": null
+    }
+  ]
+}
+
+
+Grab Movies with People ID {ID} (grab other movies):
+https://api.themoviedb.org/3/person/{ID}/movie_credits?api_key=ca4a0d08142c8099663566799ee1af54&language=en-US
+
+Return:
+{
+  "cast": [
+    {
+      "character": "Bit",
+      "credit_id": "53f02cc0c3a3685af2002177",
+      "poster_path": "/ee7T9RxLRZpEh4g3laYvZpjwxHK.jpg",
+      "id": 287168, //this is the interesting part
+      "video": false,
+      "vote_count": 0,
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [],
+      "original_language": "en",
+      "original_title": "Cock of the Air",
+      "popularity": 1.091,
+      "title": "Cock of the Air",
+      "vote_average": 0,
+      "overview": "An opera diva sets her sights on a womanizing army officer.",
+      "release_date": "1932-01-24"
+    }
+  ]
+}

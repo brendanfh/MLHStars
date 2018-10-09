@@ -1,0 +1,11 @@
+{
+  "name": "StarMapper",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Brendan Hansen, Collin Rumpca, Jarod Keene",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
